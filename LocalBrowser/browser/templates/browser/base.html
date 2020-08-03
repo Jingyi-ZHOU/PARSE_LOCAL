@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- <meta name="keywords" content="CooLab" /> -->
+        <link rel="stylesheet" type="text/css" href="{% static 'browser/main.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'browser/parse.css' %}">
+        <title>PARSE</title>
+    </head>
+    <body>
+    <div id="wrap">
+        <div class="body-one u-f-aj">
+			<img src="http://img5.imgtn.bdimg.com/it/u=1621217503,2871888446&fm=26&gp=0.jpg" />
+            <p id="cool">
+                <span data-text="P">P</span>
+                <span data-text="A">A</span>
+                <span data-text="R">R</span>
+                <span data-text="S">S</span>
+                <span data-text="E">E</span>
+            </p>
+        </div>
+        <ul id="nav">
+            <li class="lefft" style="background-color: #0064a4;border-right:none;"><a href="{% url 'browser-home' %}"><img src="/static/logo.png" style="padding-bottom:6px;height:23px;">&nbsp;Home</a></li>
+            <li class="lefft" style="background-color: #0064a4;border-right:none;"><a href="{% url 'browser-browser' %}">Browser</a></li>
+            <li class="lefft" style="background-color: #0064a4;border-right:none;"><a href="{% url 'browser-about' %}">Manual</a></li>
+            <li class="lefft" style="background-color: #0064a4;border-right:none;"><a href="{% url 'browser-contact' %}">Contact</a></li>
+        </ul>
+        <br/>
+        <div id="content">
+			<hr style="height:1px;border:none;border-top:2px solid #0064a4;" />
+			<hr style="height:1px;border:none;border-top:2px solid #ffd200;" />
+
+                {% block content %}{% endblock %}
+
+
+       
+
+            <br/>
+            <hr style="height:1px;border:none;border-top:2px solid #ffd200;" />
+			<hr style="height:1px;border:none;border-top:2px solid #0064a4;" />
+        </div>
+    </div>
+    <br/>
+    <p class="text" style="text-align:center;font-size:16px">
+        <strong>Contact:</strong> jason.j.liu@yale.edu &nbsp;&&nbsp; zhang.jing@uci.edu</p>
+    <br/>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>GWAS visualization panel</title>
+  <!-- Polyfill Web Components for browsers without native support -->
+  <script src="http://localhost:40080/bower_components/webcomponentsjs/webcomponents-loader.js"></script>
+  <!-- Import GIVE component -->
+  <link rel="import" href="http://localhost:40080/components/chart-controller/chart-controller.html">
+  <link rel="import" href="http://localhost:40080/components/chart-area/chart-area.html">
+</head>
+
+<body>
+  <!-- Embed the browser in your web page -->
+  <chart-controller ref='["hg38"]' num-of-subs="2"
+    group-id-list='["txt", "bed", "bw", "interaction"]'
+    default-track-id-list='[ {% for track in tracks %} {{ track }} {% endfor %} ]'>
+  </chart-controller>
+</body>
+
+</html>
